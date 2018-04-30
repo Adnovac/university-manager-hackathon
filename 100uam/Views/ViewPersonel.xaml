@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="100">
     <Grid>
-        <Image Source="C:\Users\Anovac\Desktop\Hackathon\100uam\images\staff001.png" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
+        <Image Name="avatar" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
         <Rectangle Fill="#7F000000" HorizontalAlignment="Left" Height="28" Margin="0,72,0,0" VerticalAlignment="Top" Width="100"/>
         <TextBlock Name="ilosc" HorizontalAlignment="Left" Margin="37,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="0" Width="27" Foreground="White" TextAlignment="Center" />
         <TextBlock HorizontalAlignment="Left" Margin="27,0,0,0" TextWrapping="Wrap" Text="Personel" VerticalAlignment="Top" Foreground="White"/>

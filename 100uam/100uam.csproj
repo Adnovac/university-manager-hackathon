@@ -55,7 +55,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Elements\BuyElements.cs" />
-    <Compile Include="Elements\Class1.cs" />
     <Compile Include="Elements\Otoczenie.cs" />
     <Compile Include="Elements\Parser.cs" />
     <Compile Include="Elements\Personel.cs" />

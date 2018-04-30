@@ -21,15 +21,17 @@ namespace _100uam.Views
     /// </summary>
     public partial class ViewPersonel : UserControl
     {
-
+        string configPath;
         Wydzialy wydzial;
         MainWindow mainWindow;
-        public ViewPersonel(Wydzialy wydzial, MainWindow mainWindow)
+        public ViewPersonel(Wydzialy wydzial, string configPath, MainWindow mainWindow)
         {
+            this.configPath = configPath;
             this.mainWindow = mainWindow;
             this.wydzial = wydzial;
             InitializeComponent();
             ilosc.Text = wydzial.LiczbaPersonelu.ToString();
+            avatar.Source = new BitmapImage(new Uri(configPath + "staff001.png"));
         }
 
         private void ZatrudnijButton_Click(object sender, RoutedEventArgs e)

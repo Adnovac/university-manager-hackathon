@@ -11,7 +11,7 @@
     </Window.Resources>
     <Grid>
         <Grid Name="izoMap" Margin="0,39,0,0">
-            <Image Source="C:\Users\Anovac\Desktop\100lecie\grafika\background.png" HorizontalAlignment="Left" Width="1272" Height="651" VerticalAlignment="Top"/>
+            <Image Source="images/background.png" HorizontalAlignment="Left" Width="1272" Height="651" VerticalAlignment="Top"/>
             <StackPanel Name="area1" HorizontalAlignment="Left" Height="187" Margin="409,2,0,0" VerticalAlignment="Top" Width="158" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
             <StackPanel Name="area2" HorizontalAlignment="Left" Height="187" Margin="733,2,0,0" VerticalAlignment="Top" Width="158" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
             <StackPanel Name="area3" HorizontalAlignment="Left" Height="187" Margin="1059,2,0,0" VerticalAlignment="Top" Width="158" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
@@ -29,24 +29,24 @@
         </Grid>
         <Grid Name="overlay">
             <Grid Name="upperMenu" Height="39" VerticalAlignment="Top" >
-                <Image Source="C:\Users\Anovac\Desktop\100lecie\grafika\upperbar.png"/>
+                <Image Source="images/upperbar.png"/>
                 <TextBlock Name="playerName" TextWrapping="Wrap" Text="Player Name" Margin="6,6,0,6" Height="27" HorizontalAlignment="Left" Width="266" FontSize="18" Foreground="White" FontWeight="Bold" FontFamily="Georgia"/>
-                <Image Name="moneyImage" Source="C:\Users\Anovac\Desktop\Hackathon\100uam\images\icons\money.png" HorizontalAlignment="Left" Height="23" Margin="337,8,0,0" VerticalAlignment="Top" Width="23"/>
+                <Image Name="moneyImage" Source="images/icons/money.png" HorizontalAlignment="Left" Height="23" Margin="337,8,0,0" VerticalAlignment="Top" Width="23"/>
                 <TextBlock Name="money" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Money" Margin="0,8,752,8" Height="23" Width="150" FontSize="16" Foreground="White"/>
-                <Image Name="expensesImage" Source="C:\Users\Anovac\Desktop\Hackathon\100uam\images\icons\income.png" HorizontalAlignment="Left" Height="23" Margin="557,8,0,0" VerticalAlignment="Top" Width="23"/>
+                <Image Name="expensesImage" Source="images/icons/income.png" HorizontalAlignment="Left" Height="23" Margin="557,8,0,0" VerticalAlignment="Top" Width="23"/>
                 <TextBlock Name="expenses" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Expenses" Margin="0,7,532,9" Height="23" Width="150" FontSize="16" Foreground="White"/>
-                <Image Name="roundImage" Source="C:\Users\Anovac\Desktop\Hackathon\100uam\images\icons\expenses.png" HorizontalAlignment="Left" Height="23" Margin="777,8,0,0" VerticalAlignment="Top" Width="23"/>
+                <Image Name="roundImage" Source="images/icons/expenses.png" HorizontalAlignment="Left" Height="23" Margin="777,8,0,0" VerticalAlignment="Top" Width="23"/>
                 <TextBlock Name="round" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Round" Margin="0,8,275,8" Height="23" Width="187" FontSize="16" Foreground="White"/>
-                <Image Name="yearImage" Source="C:\Users\Anovac\Desktop\Hackathon\100uam\images\icons\calendar.png" HorizontalAlignment="Left" Height="23" Margin="997,8,0,0" VerticalAlignment="Top" Width="23"/>
+                <Image Name="yearImage" Source="images/icons/calendar.png" HorizontalAlignment="Left" Height="23" Margin="997,8,0,0" VerticalAlignment="Top" Width="23"/>
                 <TextBlock Name="year" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Year" Margin="0,8,104,8" Height="23" Width="138" FontSize="16" Foreground="White"/>
                 <Button Name="help" Content="?" HorizontalAlignment="Right" Margin="0,0,10,0" Width="24" Background="#FF725225" Foreground="#FFF7C720" FontWeight="Bold" Click="help_Click" FontSize="19" Height="39"/>
             </Grid>
             <Grid Name="sideMenu" HorizontalAlignment="Left" Height="183" Margin="0,39,0,0" VerticalAlignment="Top" Width="286" >
-                <Image Source="C:\Users\Anovac\Desktop\100lecie\grafika\sidepanel.png"/>
+                <Image Source="images/sidepanel.png"/>
                 <TextBlock Name="studentCount" Margin="0,16,10,0" TextWrapping="Wrap" Text="Student Count" VerticalAlignment="Top" Height="25" HorizontalAlignment="Right" Width="218" FontSize="16" Foreground="White"/>
-                <Image Source="C:\Users\Anovac\Desktop\Hackathon\100uam\images\icons\students.png" HorizontalAlignment="Left" Height="25" Margin="28,16,0,0" VerticalAlignment="Top" Width="25"/>
+                <Image Source="images/icons/students.png" HorizontalAlignment="Left" Height="25" Margin="28,16,0,0" VerticalAlignment="Top" Width="25"/>
                 <TextBlock Name="staffCount" Margin="0,56,10,0" TextWrapping="Wrap" Text="Staff Count" VerticalAlignment="Top" Height="25" HorizontalAlignment="Right" Width="218" FontSize="16" Foreground="White"/>
-                <Image Source="C:\Users\Anovac\Desktop\Hackathon\100uam\images\icons\staff.png" HorizontalAlignment="Left" Height="25" Margin="28,56,0,0" VerticalAlignment="Top" Width="25"/>
+                <Image Source="images/icons/staff.png" HorizontalAlignment="Left" Height="25" Margin="28,56,0,0" VerticalAlignment="Top" Width="25"/>
                 <Rectangle Name="satisfaction" Height="21" Margin="58,0,0,62" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="174">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -55,7 +55,7 @@
                         </LinearGradientBrush>
                     </Rectangle.Fill>
                 </Rectangle>
-                <Image Source="C:\Users\Anovac\Desktop\Hackathon\100uam\images\icons\happiness.png" HorizontalAlignment="Left" Height="25" Margin="28,96,0,0" VerticalAlignment="Top" Width="25"/>
+                <Image Source="images/icons/happiness.png" HorizontalAlignment="Left" Height="25" Margin="28,96,0,0" VerticalAlignment="Top" Width="25"/>
                 <Rectangle Name="prestige" Height="21" Margin="58,0,0,22" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="174">
                     <Rectangle.Fill>
                         <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -64,32 +64,32 @@
                         </LinearGradientBrush>
                     </Rectangle.Fill>
                 </Rectangle>
-                <Image Source="C:\Users\Anovac\Desktop\Hackathon\100uam\images\icons\prestige.png" HorizontalAlignment="Left" Height="25" Margin="28,136,0,0" VerticalAlignment="Top" Width="25"/>
+                <Image Source="images/icons/prestige.png" HorizontalAlignment="Left" Height="25" Margin="28,136,0,0" VerticalAlignment="Top" Width="25"/>
             </Grid>
             <Button Name="nextRound" HorizontalAlignment="Left" Margin="51,236,0,0" VerticalAlignment="Top" Width="174" Height="51" FontSize="20" Click="nextRound_Click_1">
-                <Button.Background>
-                    <ImageBrush ImageSource="C:\Users\Anovac\Desktop\100lecie\grafika\button.png" Stretch="UniformToFill"/>
-                </Button.Background>
+                <!--<Button.Background>
+                    <ImageBrush ImageSource="images/button.png" Stretch="UniformToFill"/>
+                </Button.Background>-->
                 <TextBlock TextWrapping="Wrap" Text="Koniec Rundy" FontFamily="Georgia" Foreground="#FF634315"/>
             </Button>
             <Grid Name="bottomPanel" HorizontalAlignment="Left" Height="137" Margin="0,553,0,0" VerticalAlignment="Top" Width="1272">
-                <Image Name="bottomWrapper" Source="C:\Users\Anovac\Desktop\100lecie\grafika\bottombar.png" Margin="0,4,0,-4"/>
+                <Image Name="bottomWrapper" Source="images/bottombar.png" Margin="0,4,0,-4"/>
                 <Button Name="bottomCollapse" HorizontalAlignment="Right" Margin="0,0,10,0" VerticalAlignment="Top" Width="52" Height="29" Click="BottomCollapseClick">
-                    <Button.Background>
-                        <ImageBrush ImageSource="C:\Users\Anovac\Desktop\100lecie\grafika\bottombarbutton.png" Stretch="UniformToFill"/>
-                    </Button.Background>
+                    <!--<Button.Background>
+                        <ImageBrush ImageSource="images/bottombarbutton.png" Stretch="UniformToFill"/>
+                    </Button.Background>-->
                     <TextBlock TextWrapping="Wrap" Text="Ukryj" FontFamily="Georgia" Foreground="#FFFFFCE7"/>
                 </Button>
                 <Button Name="buildingsButton" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="75" Click="BuildingsButtonClick" Height="22">
-                    <Button.Background>
-                        <ImageBrush ImageSource="C:\Users\Anovac\Desktop\100lecie\grafika\bottombarbutton.png" Stretch="UniformToFill"/>
-                    </Button.Background>
+                    <!--<Button.Background>
+                        <ImageBrush ImageSource="images/bottombarbutton.png" Stretch="UniformToFill"/>
+                    </Button.Background>-->
                     <TextBlock TextWrapping="Wrap" Text="Budynek" FontFamily="Georgia" Foreground="#FFFFFCE7"/>
                 </Button>
                 <Button Name="staffButton"  HorizontalAlignment="Left" Margin="86,0,0,0" VerticalAlignment="Top" Width="75" Click="StaffButtonClick" Height="22">
-                    <Button.Background>
-                        <ImageBrush ImageSource="C:\Users\Anovac\Desktop\100lecie\grafika\bottombarbutton.png" Stretch="UniformToFill"/>
-                    </Button.Background>
+                    <!--<Button.Background>
+                        <ImageBrush ImageSource="images/bottombarbutton.png" Stretch="UniformToFill"/>
+                    </Button.Background>-->
                     <TextBlock TextWrapping="Wrap" Text="Personel" FontFamily="Georgia" Foreground="#FFFFFCE7"/>
                 </Button>
                 <Grid Name="buildingsGrid" Height="100" Margin="10,0,10,10" VerticalAlignment="Bottom">

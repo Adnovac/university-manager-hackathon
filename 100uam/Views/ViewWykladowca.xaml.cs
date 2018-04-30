@@ -21,12 +21,15 @@ namespace _100uam.Views
     /// </summary>
     public partial class ViewWykladowca : UserControl
     {
+        string configPath;
         Wydzialy wydzial;
-        public ViewWykladowca(Wydzialy wydzial ,MainWindow mainWindow)
+        public ViewWykladowca(Wydzialy wydzial , string configPath,MainWindow mainWindow)
         {
+            this.configPath = configPath;
             this.wydzial = wydzial;
             InitializeComponent();
             ilosc.Text = wydzial.LiczbaWykladowcow.ToString();
+            avatar.Source = new BitmapImage(new Uri(configPath + "staff002.png"));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
