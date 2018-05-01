@@ -35,7 +35,7 @@ namespace _100uam.Views
 
         void SetEvent()
         {
-            string[] lines = File.ReadAllLines(configPath + @"questData\quest" + questID + ".txt");
+            string[] lines = File.ReadAllLines(configPath + @"questData\quest" + questID + ".txt", Encoding.Default);
             MessageBox.Show(configPath + @"questData\quest" + questID + ".txt");
             //quest description from separate file
             questDescription.Text = File.ReadAllText(configPath + @"questData\questDescription" + questID + ".txt", Encoding.Default);

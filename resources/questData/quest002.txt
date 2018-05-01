@@ -1,0 +1,12 @@
+G³odni Studenci
+eventImages\magdaf_l.png
+money
+1000000
+none
+none
+prestige
+1000
+happiness
+1000
+none
+END

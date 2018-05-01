@@ -26,8 +26,10 @@ namespace _100uam
     
     public partial class MainWindow : Window
     {
-        
+        bool musicPlaying = true;
+        SoundPlayer mediaPlayer;
         string configPath;
+
         public int gameyear = 1919;
         public int wydatki = 0;
         public int prestiz = 0;
@@ -47,9 +49,9 @@ namespace _100uam
             {
                 MessageBox.Show("Could not access config.txt");
             }
-            SoundPlayer mediaPlayer = new SoundPlayer(configPath + @"bensound-jazzyfrenchy.wav");
+
             InitializeComponent();
-            
+            mediaPlayer = new SoundPlayer(configPath + @"bensound-jazzyfrenchy.wav");
             DescribePersonel.Text = "Zbuduj wydział aby zatrudniać pracowników. Ekipa sprzątająca podnosi zadowolenie studentów,\nnatomiast wykładowcy wpływają\n na prestiż uczelni.      \nUważaj!\nZbyt duża liczba pracowników może mocno obciążyć twój budżet a otoczeni przez wykładowców studenci nie będą zadowoleni!";
             playerName.Text = player.Name;
             Aktualizacja(); 
@@ -57,9 +59,9 @@ namespace _100uam
             showBottomPanel.Visibility = System.Windows.Visibility.Visible;
             SetWindow();
             SetMap();
-            //mediaPlayer.PlayLooping();
+            mediaPlayer.PlayLooping();
             MessageBox.Show("Zaczynasz jako jeden z założycieli UAM. Aby uzyskać pomoc kliknij w znak zapytania w prawym górnym rogu aplikacji!");
-            ThrowEvent("001");
+            ThrowEvent("002");
         }
         #region Game Logic
             //classes for visuals
@@ -114,6 +116,7 @@ namespace _100uam
             }
             void ThrowEvent(string eventID)
             {
+                eventWrapper.Visibility = Visibility.Visible;
                 ViewEvent viewEvent = new ViewEvent(configPath, eventID, this);
                 eventStackPanel.Children.Add(viewEvent);
             }
@@ -165,9 +168,23 @@ namespace _100uam
             {
                 MessageBox.Show("Pamiętaj, że rachunki zostaną odjęte a zyski przyznane po zakończeniu rundy. Aby zatrudnić pracowików skorzystaj z rozsuwanego menu w lewym dolnym rogu ekranu!\nAutorzy: Magdalena Wilczyńska, Anna Nowak");
             }
+            private void MuteSound(object sender, RoutedEventArgs e)
+            {
+                if (musicPlaying)
+                {
+                    musicPlaying = false;
+                    mediaPlayer.Stop();
+                }
+                else
+                {
+                    musicPlaying = true;
+                    mediaPlayer.PlayLooping();
+                }
+            }
 
-            //other
-            private void nextRound_Click(object sender, RoutedEventArgs e)
+
+        //other
+        private void nextRound_Click(object sender, RoutedEventArgs e)
             {
                 Aktualizacja();
                 player.playermoney = player.playermoney - wydatki;
@@ -235,6 +252,7 @@ namespace _100uam
             }
             private void SetWindow()
             {
+                eventWrapper.Visibility = Visibility.Hidden;
                 //faculties data
                 otoczenie.Add(new Wydzialy("Anglistyka", "Wydział Anglistyki\n", 40000000, 10000));
                 otoczenie.Add(new Wydzialy("Biologia", "Wydział Biologii\n", 20000000, 16000));
@@ -268,6 +286,7 @@ namespace _100uam
                 bottomCollapseButtonImage.Source = new BitmapImage(new Uri(configPath + "bottombarbutton.png"));
                 buildingsButtonImage.Source = new BitmapImage(new Uri(configPath + "bottombarbutton.png"));
                 staffButtonImage.Source = new BitmapImage(new Uri(configPath + "bottombarbutton.png"));
+                muteSoundImage.Source = new BitmapImage(new Uri(configPath + "icons/music.png"));
         }
         #endregion
 
