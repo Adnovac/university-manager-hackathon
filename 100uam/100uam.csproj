@@ -64,6 +64,12 @@
     <Compile Include="Views\emptyArea.xaml.cs">
       <DependentUpon>emptyArea.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ViewEvent.xaml.cs">
+      <DependentUpon>ViewEvent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewEventResource.xaml.cs">
+      <DependentUpon>ViewEventResource.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ViewPersonel.xaml.cs">
       <DependentUpon>ViewPersonel.xaml</DependentUpon>
     </Compile>
@@ -85,6 +91,14 @@
     <Page Include="Views\emptyArea.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ViewEvent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewEventResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ViewPersonel.xaml">
       <SubType>Designer</SubType>

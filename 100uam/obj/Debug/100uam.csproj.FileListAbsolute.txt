@@ -99,3 +99,7 @@ C:\Users\Admin\Documents\GitHub\UniversityManager\100uam\obj\Debug\100uam.csproj
 C:\Users\Admin\Documents\GitHub\UniversityManager\100uam\obj\Debug\100uam.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\GitHub\UniversityManager\100uam\obj\Debug\100uam.exe
 C:\Users\Admin\Documents\GitHub\UniversityManager\100uam\obj\Debug\100uam.pdb
+C:\Users\Admin\Documents\GitHub\UniversityManager\100uam\obj\Debug\Views\ViewEvent.g.cs
+C:\Users\Admin\Documents\GitHub\UniversityManager\100uam\obj\Debug\Views\ViewEventResource.g.cs
+C:\Users\Admin\Documents\GitHub\UniversityManager\100uam\obj\Debug\Views\ViewEvent.baml
+C:\Users\Admin\Documents\GitHub\UniversityManager\100uam\obj\Debug\Views\ViewEventResource.baml

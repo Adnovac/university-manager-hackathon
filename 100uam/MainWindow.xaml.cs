@@ -26,7 +26,7 @@ namespace _100uam
     
     public partial class MainWindow : Window
     {
-        //SoundPlayer mediaPlayer = new SoundPlayer(@"bensound-jazzyfrenchy.wav");
+        
         string configPath;
         public int gameyear = 1919;
         public int wydatki = 0;
@@ -47,6 +47,7 @@ namespace _100uam
             {
                 MessageBox.Show("Could not access config.txt");
             }
+            SoundPlayer mediaPlayer = new SoundPlayer(configPath + @"bensound-jazzyfrenchy.wav");
             InitializeComponent();
             
             DescribePersonel.Text = "Zbuduj wydział aby zatrudniać pracowników. Ekipa sprzątająca podnosi zadowolenie studentów,\nnatomiast wykładowcy wpływają\n na prestiż uczelni.      \nUważaj!\nZbyt duża liczba pracowników może mocno obciążyć twój budżet a otoczeni przez wykładowców studenci nie będą zadowoleni!";
@@ -54,23 +55,11 @@ namespace _100uam
             Aktualizacja(); 
             bottomPanel.Visibility = System.Windows.Visibility.Hidden;
             showBottomPanel.Visibility = System.Windows.Visibility.Visible;
-            otoczenie.Add(new Wydzialy("Anglistyka", "Wydział Anglistyki\n", 40000000, 10000));
-            otoczenie.Add(new Wydzialy("Biologia", "Wydział Biologii\n", 20000000, 16000));
-            otoczenie.Add(new Wydzialy("Chemia", "Wydział Chemii\n", 15000000, 12000));
-            otoczenie.Add(new Wydzialy("WFPiK", "Wydział Filologii Polskiej i Klasycznej\n", 10000000, 60000));
-            otoczenie.Add(new Wydzialy("Fizyka", "Wydział Fizyki\n", 40000000, 10000));
-            otoczenie.Add(new Wydzialy("Historia", "Wydział Historyczny\n", 20000000, 50000));
-            otoczenie.Add(new Wydzialy("WMI", "Wydział Matematyki i Informatyki\n", 30000000, 10000));
-            otoczenie.Add(new Wydzialy("WNGiG", "Wydział Nauk Geograficznych i Geologicznych\n", 20000000, 16000));
-            otoczenie.Add(new Wydzialy("WNPiD", "Wydział Nauk Politycznych i Dziennikarstwa\n", 21000000, 15000));
-            otoczenie.Add(new Wydzialy("WNS", "Wydział Nauk Społecznych\n", 18000000, 16000));
-            otoczenie.Add(new Wydzialy("Neofilologia", "Wydział Neofilologii\n", 25000000, 14000));
-            otoczenie.Add(new Wydzialy("WPiA", "Wydział Prawa i Administracji\n", 20000000, 20000));
-            otoczenie.Add(new Wydzialy("WSE", "Wydział Studiów Edukacyjnych\n", 10000000, 50000));
-            otoczenie.Add(new Wydzialy("Teologia", "Wydział Teologiczny\n", 15000000,60000));
+            SetWindow();
             SetMap();
             //mediaPlayer.PlayLooping();
-            //MessageBox.Show("Zaczynasz jako jeden z założycieli UAM. Aby uzyskać pomoc kliknij w znak zapytania w prawym górnym rogu aplikacji!");
+            MessageBox.Show("Zaczynasz jako jeden z założycieli UAM. Aby uzyskać pomoc kliknij w znak zapytania w prawym górnym rogu aplikacji!");
+            ThrowEvent("001");
         }
         #region Game Logic
             //classes for visuals
@@ -123,6 +112,11 @@ namespace _100uam
                     txt.Children.Add(emptyArea);
                 }
             }
+            void ThrowEvent(string eventID)
+            {
+                ViewEvent viewEvent = new ViewEvent(configPath, eventID, this);
+                eventStackPanel.Children.Add(viewEvent);
+            }
         #endregion
         #region Interface Logic
             //buttons logic
@@ -132,7 +126,9 @@ namespace _100uam
                 bottomPanel.Visibility = System.Windows.Visibility.Visible;
                 showBottomPanel.Visibility = System.Windows.Visibility.Hidden;
                 staffButton.Visibility = System.Windows.Visibility.Visible;
+                staffButtonImage.Visibility = Visibility.Visible;
                 buildingsButton.Visibility = System.Windows.Visibility.Hidden;
+                buildingsButtonImage.Visibility = Visibility.Hidden;
                 staffGrid.Visibility = System.Windows.Visibility.Hidden;
                 buildingsGrid.Visibility = System.Windows.Visibility.Visible;
             }
@@ -146,7 +142,9 @@ namespace _100uam
             private void BuildingsButtonClick(object sender, RoutedEventArgs e)
             {
                 buildingsButton.Visibility = System.Windows.Visibility.Hidden;
+                buildingsButtonImage.Visibility = Visibility.Hidden;
                 staffButton.Visibility = System.Windows.Visibility.Visible;
+                staffButtonImage.Visibility = Visibility.Visible;
                 buildingsGrid.Visibility = System.Windows.Visibility.Visible;
                 staffGrid.Visibility = System.Windows.Visibility.Hidden;
                 Aktualizacja();
@@ -155,7 +153,9 @@ namespace _100uam
             private void StaffButtonClick(object sender, RoutedEventArgs e)
             {
                 buildingsButton.Visibility = System.Windows.Visibility.Visible;
+                buildingsButtonImage.Visibility = Visibility.Visible;
                 staffButton.Visibility = System.Windows.Visibility.Hidden;
+                staffButtonImage.Visibility = Visibility.Hidden;
                 buildingsGrid.Visibility = System.Windows.Visibility.Hidden;
                 staffGrid.Visibility = System.Windows.Visibility.Visible;
                 Aktualizacja();
@@ -233,8 +233,44 @@ namespace _100uam
                 }
                 Aktualizacja();
             }
+            private void SetWindow()
+            {
+                //faculties data
+                otoczenie.Add(new Wydzialy("Anglistyka", "Wydział Anglistyki\n", 40000000, 10000));
+                otoczenie.Add(new Wydzialy("Biologia", "Wydział Biologii\n", 20000000, 16000));
+                otoczenie.Add(new Wydzialy("Chemia", "Wydział Chemii\n", 15000000, 12000));
+                otoczenie.Add(new Wydzialy("WFPiK", "Wydział Filologii Polskiej i Klasycznej\n", 10000000, 60000));
+                otoczenie.Add(new Wydzialy("Fizyka", "Wydział Fizyki\n", 40000000, 10000));
+                otoczenie.Add(new Wydzialy("Historia", "Wydział Historyczny\n", 20000000, 50000));
+                otoczenie.Add(new Wydzialy("WMI", "Wydział Matematyki i Informatyki\n", 30000000, 10000));
+                otoczenie.Add(new Wydzialy("WNGiG", "Wydział Nauk Geograficznych i Geologicznych\n", 20000000, 16000));
+                otoczenie.Add(new Wydzialy("WNPiD", "Wydział Nauk Politycznych i Dziennikarstwa\n", 21000000, 15000));
+                otoczenie.Add(new Wydzialy("WNS", "Wydział Nauk Społecznych\n", 18000000, 16000));
+                otoczenie.Add(new Wydzialy("Neofilologia", "Wydział Neofilologii\n", 25000000, 14000));
+                otoczenie.Add(new Wydzialy("WPiA", "Wydział Prawa i Administracji\n", 20000000, 20000));
+                otoczenie.Add(new Wydzialy("WSE", "Wydział Studiów Edukacyjnych\n", 10000000, 50000));
+                otoczenie.Add(new Wydzialy("Teologia", "Wydział Teologiczny\n", 15000000, 60000));
+
+            //image data
+                background.Source = new BitmapImage(new Uri(configPath + "background.png"));
+                upperBar.Source = new BitmapImage(new Uri(configPath + "upperbar.png"));
+                moneyImage.Source = new BitmapImage(new Uri(configPath + "icons/money.png"));
+                incomeImage.Source = new BitmapImage(new Uri(configPath + "icons/income.png"));
+                expensesImage.Source = new BitmapImage(new Uri(configPath + "icons/expenses.png"));
+                yearImage.Source = new BitmapImage(new Uri(configPath + "icons/calendar.png"));
+                sidePanel.Source = new BitmapImage(new Uri(configPath + "sidepanel.png"));
+                studentsImage.Source = new BitmapImage(new Uri(configPath + "icons/students.png"));
+                staffImage.Source = new BitmapImage(new Uri(configPath + "icons/staff.png"));
+                happinessImage.Source = new BitmapImage(new Uri(configPath + "icons/happiness.png"));
+                prestigeImage.Source = new BitmapImage(new Uri(configPath + "icons/prestige.png"));
+                bottomWrapper.Source = new BitmapImage(new Uri(configPath + "bottombar.png"));
+                nextRoundButtonImage.Source = new BitmapImage(new Uri(configPath + "button.png"));
+                bottomCollapseButtonImage.Source = new BitmapImage(new Uri(configPath + "bottombarbutton.png"));
+                buildingsButtonImage.Source = new BitmapImage(new Uri(configPath + "bottombarbutton.png"));
+                staffButtonImage.Source = new BitmapImage(new Uri(configPath + "bottombarbutton.png"));
+        }
         #endregion
-        
+
         private void SetWydzial(emptyArea element)
         {
 

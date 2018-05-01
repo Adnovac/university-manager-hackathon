@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Admin\Documents\GitHub\UniversityManager\100uam\App.xaml
-4-108212546
+62147203730
 
-19318359280
+211607367367
 131569487696
-MainWindow.xaml;Views\emptyArea.xaml;Views\ViewPersonel.xaml;Views\ViewWykladowca.xaml;
+MainWindow.xaml;Views\emptyArea.xaml;Views\ViewEvent.xaml;Views\ViewEventResource.xaml;Views\ViewPersonel.xaml;Views\ViewWykladowca.xaml;
 
-True
+False
 
