@@ -12,20 +12,20 @@
     <Grid>
         <Grid Name="izoMap" Margin="0,39,0,0">
             <Image Name="background" HorizontalAlignment="Left" Width="1272" Height="651" VerticalAlignment="Top"/>
-            <StackPanel Name="area1" HorizontalAlignment="Left" Height="187" Margin="409,2,0,0" VerticalAlignment="Top" Width="158" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area2" HorizontalAlignment="Left" Height="187" Margin="733,2,0,0" VerticalAlignment="Top" Width="158" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area3" HorizontalAlignment="Left" Height="187" Margin="1059,2,0,0" VerticalAlignment="Top" Width="158" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area4" HorizontalAlignment="Left" Height="187" Margin="570,93,0,0" VerticalAlignment="Top" Width="158" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area5" HorizontalAlignment="Left" Height="187" Margin="896,93,0,0" VerticalAlignment="Top" Width="158" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area6" HorizontalAlignment="Left" Height="187" Margin="409,189,0,0" VerticalAlignment="Top" Width="158" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area7" HorizontalAlignment="Left" Height="187" Margin="733,189,0,0" VerticalAlignment="Top" Width="158" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area8" HorizontalAlignment="Left" Height="187" Margin="1059,189,0,0" VerticalAlignment="Top" Width="158" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area9" HorizontalAlignment="Left" Height="187" Margin="246,280,0,0" VerticalAlignment="Top" Width="158" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area10" HorizontalAlignment="Left" Height="187" Margin="570,280,0,0" VerticalAlignment="Top" Width="158" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area11" HorizontalAlignment="Left" Height="187" Margin="896,280,0,0" VerticalAlignment="Top" Width="158" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area12" HorizontalAlignment="Left" Height="187" Margin="409,376,0,0" VerticalAlignment="Top" Width="158" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area13" HorizontalAlignment="Left" Height="187" Margin="733,376,0,0" VerticalAlignment="Top" Width="158" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area14" HorizontalAlignment="Left" Height="187" Margin="1059,376,0,0" VerticalAlignment="Top" Width="158" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area1" HorizontalAlignment="Left" Height="187" Margin="409,22,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area2" HorizontalAlignment="Left" Height="187" Margin="733,22,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area3" HorizontalAlignment="Left" Height="187" Margin="1059,22,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area4" HorizontalAlignment="Left" Height="187" Margin="570,113,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area5" HorizontalAlignment="Left" Height="187" Margin="896,113,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area6" HorizontalAlignment="Left" Height="187" Margin="409,189,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area7" HorizontalAlignment="Left" Height="187" Margin="733,189,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area8" HorizontalAlignment="Left" Height="187" Margin="1059,189,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area9" HorizontalAlignment="Left" Height="187" Margin="246,280,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area10" HorizontalAlignment="Left" Height="187" Margin="570,280,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area11" HorizontalAlignment="Left" Height="187" Margin="896,280,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area12" HorizontalAlignment="Left" Height="187" Margin="409,356,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area13" HorizontalAlignment="Left" Height="187" Margin="733,356,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area14" HorizontalAlignment="Left" Height="187" Margin="1059,356,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
         </Grid>
         <Grid Name="overlay">
             <Grid Name="upperMenu" Height="39" VerticalAlignment="Top" >
@@ -34,7 +34,7 @@
                 <Image Name="moneyImage" HorizontalAlignment="Left" Height="23" Margin="337,8,0,0" VerticalAlignment="Top" Width="23"/>
                 <TextBlock Name="money" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Money" Margin="0,8,752,8" Height="23" Width="150" FontSize="16" Foreground="White"/>
                 <Image Name="incomeImage" HorizontalAlignment="Left" Height="23" Margin="557,8,0,0" VerticalAlignment="Top" Width="23"/>
-                <TextBlock Name="expenses" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Expenses" Margin="0,7,532,9" Height="23" Width="180" FontSize="16" Foreground="White"/>
+                <TextBlock Name="expenses" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Expenses" Margin="0,7,500,9" Height="23" Width="180" FontSize="16" Foreground="White"/>
                 <Image Name="expensesImage" HorizontalAlignment="Left" Height="23" Margin="777,8,0,0" VerticalAlignment="Top" Width="23"/>
                 <TextBlock Name="round" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Round" Margin="0,8,275,8" Height="23" Width="187" FontSize="16" Foreground="White"/>
                 <Image Name="yearImage" HorizontalAlignment="Left" Height="23" Margin="997,8,0,0" VerticalAlignment="Top" Width="23"/>

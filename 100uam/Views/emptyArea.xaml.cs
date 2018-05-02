@@ -39,7 +39,7 @@ namespace _100uam.Views
             get{
                 return otoczenie;
             }
-            }
+        }
 
         private void build_Click(object sender, RoutedEventArgs e)
         {

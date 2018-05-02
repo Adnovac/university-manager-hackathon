@@ -61,7 +61,7 @@ namespace _100uam
             SetMap();
             mediaPlayer.PlayLooping();
             MessageBox.Show("Zaczynasz jako jeden z założycieli UAM. Aby uzyskać pomoc kliknij w znak zapytania w prawym górnym rogu aplikacji!");
-            ThrowEvent("002");
+            //ThrowEvent("002");
         }
         #region Game Logic
             //classes for visuals

@@ -5,11 +5,19 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:_100uam.Views"
              mc:Ignorable="d" 
-             MaxHeight="187" MaxWidth="158">
-    <Grid Width="158" Height="187">
-         <Image Name="emptyAreaTexture" HorizontalAlignment="Left" Height="165" VerticalAlignment="Top" Width="165" Margin="-3,11,-4,0"/>
-        <Button Name="build" Content="Buduj" HorizontalAlignment="Left" Margin="40,160,0,0" VerticalAlignment="Top" Width="75" Click="build_Click" Background="White"/>
-    <TextBlock Name="WydzialName" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" Height="18" Width="138" TextAlignment="Center"/>
+             MaxHeight="187" MaxWidth="160">
+    <Grid Width="160" Height="187">
+        <Image Name="emptyAreaTexture" HorizontalAlignment="Left" Height="160" VerticalAlignment="Top" Width="160" Margin="0,11,0,0"/>
+        <Button Name="build" Content="Buduj" HorizontalAlignment="Left" Margin="43,160,0,0" VerticalAlignment="Top" Width="75" Click="build_Click" BorderBrush="{x:Null}" Foreground="White">
+            <Button.Background>
+                <SolidColorBrush Color="Black" Opacity="0.3"/>
+            </Button.Background>
+        </Button>
+        <TextBlock Name="WydzialName" HorizontalAlignment="Left" Margin="11,137,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" Height="18" Width="138" TextAlignment="Center">
+            <TextBlock.Background>
+                <SolidColorBrush Color="Black" Opacity="0.2"/>
+            </TextBlock.Background>
+        </TextBlock>
 
-  </Grid>
+    </Grid>
 </UserControl>
