@@ -1,0 +1,13 @@
+To jest tytul questa
+eventImages\aniaf_l.png
+money
+1000000
+none
+none
+income
+100000
+prestige
+1000
+happiness
+20
+END

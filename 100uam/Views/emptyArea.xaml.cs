@@ -23,9 +23,11 @@ namespace _100uam.Views
     {
         MainWindow mainWindow;
         Wydzialy otoczenie;
+        string configPath;
 
-        public emptyArea(Wydzialy otoczenie, string texture, MainWindow mainWindow)
+        public emptyArea(Wydzialy otoczenie, string texture, MainWindow mainWindow, string configPath)
         {
+            this.configPath = configPath;
             this.mainWindow = mainWindow;
             this.otoczenie = otoczenie;
             InitializeComponent();
@@ -37,7 +39,7 @@ namespace _100uam.Views
             get{
                 return otoczenie;
             }
-            }
+        }
 
         private void build_Click(object sender, RoutedEventArgs e)
         {
@@ -47,7 +49,7 @@ namespace _100uam.Views
             if (otoczenie.Status==1)
             {
                 int texture_number = rnd.Next(1, 4);
-                texture = @"C:\Users\Anovac\Desktop\Hackathon\100uam\images\trees0" + texture_number.ToString() + @".png";
+                texture = configPath + @"trees0" + texture_number.ToString() + @".png";
                 otoczenie.Zburz();
                 otoczenie.Status = 0;
                 build.Content = "Buduj";
@@ -58,7 +60,7 @@ namespace _100uam.Views
             {
                 int texture_number = rnd.Next(1, 3);
                 texture = "";
-                texture = @"C:\Users\Anovac\Desktop\Hackathon\100uam\images\building00" + texture_number.ToString() + @".png";
+                texture = configPath + @"building00" + texture_number.ToString() + @".png";
                 otoczenie.Status = 1; 
                 build.Content = "Zburz";                       
                 myWin.wydatki = myWin.wydatki + otoczenie.GetCost;
