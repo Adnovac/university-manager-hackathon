@@ -27,12 +27,21 @@
             <StackPanel Name="area13" HorizontalAlignment="Left" Height="187" Margin="733,356,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
             <StackPanel Name="area14" HorizontalAlignment="Left" Height="187" Margin="1059,356,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
         </Grid>
+        <Grid x:Name="eventWrapper">
+            <StackPanel x:Name="eventChecklist" Margin="27,321,1159,90" Orientation="Horizontal" Width="85" Height="280"/>
+            <Grid x:Name="eventPopup">
+                <Grid.Background>
+                    <SolidColorBrush Color="#FF535353" Opacity="0.2"/>
+                </Grid.Background>
+                <StackPanel x:Name="eventStackPanel" Height="380" VerticalAlignment="Top" Width="620" Margin="350,95,0,0" HorizontalAlignment="Left"/>
+            </Grid>
+        </Grid>
         <Grid Name="overlay">
             <Grid Name="upperMenu" Height="39" VerticalAlignment="Top" >
                 <Image Name="upperBar"/>
                 <TextBlock Name="playerName" TextWrapping="Wrap" Text="Player Name" Margin="6,6,0,6" Height="27" HorizontalAlignment="Left" Width="266" FontSize="18" Foreground="White" FontWeight="Bold" FontFamily="Georgia"/>
                 <Image Name="moneyImage" HorizontalAlignment="Left" Height="23" Margin="337,8,0,0" VerticalAlignment="Top" Width="23"/>
-                <TextBlock Name="money" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Money" Margin="0,8,752,8" Height="23" Width="150" FontSize="16" Foreground="White"/>
+                <TextBlock Name="money" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Money" Margin="0,8,715,8" Height="23" Width="187" FontSize="16" Foreground="White"/>
                 <Image Name="incomeImage" HorizontalAlignment="Left" Height="23" Margin="557,8,0,0" VerticalAlignment="Top" Width="23"/>
                 <TextBlock Name="expenses" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Expenses" Margin="0,7,500,9" Height="23" Width="180" FontSize="16" Foreground="White"/>
                 <Image Name="expensesImage" HorizontalAlignment="Left" Height="23" Margin="777,8,0,0" VerticalAlignment="Top" Width="23"/>
@@ -41,7 +50,7 @@
                 <TextBlock Name="year" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Year" Margin="0,8,104,8" Height="23" Width="138" FontSize="16" Foreground="White"/>
                 <Image Name="muteSoundImage" HorizontalAlignment="Right" Margin="0,-1,40,1" Width="24" Height="39"/>
                 <Button Name="muteSound" HorizontalAlignment="Right" Margin="0,0,40,0" Width="24" FontWeight="Bold" Click="MuteSound" FontSize="19" Height="39"/>
-                <Button Name="help" Content="?" HorizontalAlignment="Right" Margin="0,0,10,0" Width="24" Background="#FF725225" Foreground="#FFF7C720" FontWeight="Bold" Click="help_Click" FontSize="19" Height="39"/>
+                <Button Name="help" Content="?" HorizontalAlignment="Right" Margin="0,0,10,0" Width="24" Background="#FF725225" Foreground="#FFF7C720" FontWeight="Bold" Click="help_Click" FontSize="19" Height="39" Cursor="Help"/>
             </Grid>
             <Grid Name="sideMenu" HorizontalAlignment="Left" Height="183" Margin="0,39,0,0" VerticalAlignment="Top" Width="286" >
                 <Image Name="sidePanel"/>
@@ -98,12 +107,6 @@
             </Grid>
             <Button Name="showBottomPanel" Content="Zarządzanie" HorizontalAlignment="Left" Margin="10,658,0,0" VerticalAlignment="Top" Width="75" Click="ShowBottomPanelClick" Background="#FFE08D15"/>
             <TextBlock Name="credits" Text="Royalty Free Music from Bensound" Foreground="White" Margin="1081,669,0,-1"/>
-        </Grid>
-        <Grid Name="eventWrapper">
-            <Grid.Background>
-                <SolidColorBrush Color="#FF535353" Opacity="0.2"/>
-            </Grid.Background>
-            <StackPanel Name="eventStackPanel" Height="380" VerticalAlignment="Top" Width="620" Margin="350,95,0,0" HorizontalAlignment="Left"/>
         </Grid>
     </Grid>
 </Window>
