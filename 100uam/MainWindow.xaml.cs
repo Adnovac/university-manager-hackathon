@@ -54,14 +54,12 @@ namespace _100uam
             mediaPlayer = new SoundPlayer(configPath + @"bensound-jazzyfrenchy.wav");
             DescribePersonel.Text = "Zbuduj wydział aby zatrudniać pracowników. Ekipa sprzątająca podnosi zadowolenie studentów,\nnatomiast wykładowcy wpływają\n na prestiż uczelni.      \nUważaj!\nZbyt duża liczba pracowników może mocno obciążyć twój budżet a otoczeni przez wykładowców studenci nie będą zadowoleni!";
             playerName.Text = player.Name;
-            Aktualizacja(); 
-            bottomPanel.Visibility = System.Windows.Visibility.Hidden;
-            showBottomPanel.Visibility = System.Windows.Visibility.Visible;
+            Aktualizacja();            
             SetWindow();
             SetMap();
             mediaPlayer.PlayLooping();
             MessageBox.Show("Zaczynasz jako jeden z założycieli UAM. Aby uzyskać pomoc kliknij w znak zapytania w prawym górnym rogu aplikacji!");
-            //ThrowEvent("002");
+            ThrowEvent("002", true);
         }
         #region Game Logic
             //classes for visuals
@@ -91,7 +89,7 @@ namespace _100uam
                 }
                 prestiz = prestiz / posiadane.Count;
                 zadowolenie = zadowolenie / posiadane.Count;
-                money.Text = "Kwota: " + parser.ParseNumber(player.Playermoney.ToString()) + " zł";
+                money.Text = "Budżet: " + parser.ParseNumber(player.Playermoney.ToString()) + " zł";
                 round.Text = "Wydatki: " + parser.ParseNumber(wydatki.ToString()) + " zł";
                 year.Text = "Rok " + gameyear;
                 if (studenci != 0)
@@ -114,11 +112,13 @@ namespace _100uam
                     txt.Children.Add(emptyArea);
                 }
             }
-            void ThrowEvent(string eventID)
+            void ThrowEvent(string eventID, bool disableNextRoundButton)
             {
-                eventWrapper.Visibility = Visibility.Visible;
+                eventPopup.Visibility = Visibility.Visible;
                 ViewEvent viewEvent = new ViewEvent(configPath, eventID, this);
+                eventStackPanel.Children.Clear();
                 eventStackPanel.Children.Add(viewEvent);
+                nextRound.IsEnabled = !disableNextRoundButton;
             }
         #endregion
         #region Interface Logic
@@ -183,8 +183,8 @@ namespace _100uam
             }
 
 
-        //other
-        private void nextRound_Click(object sender, RoutedEventArgs e)
+            //other
+            private void nextRound_Click(object sender, RoutedEventArgs e)
             {
                 Aktualizacja();
                 player.playermoney = player.playermoney - wydatki;
@@ -252,8 +252,12 @@ namespace _100uam
             }
             private void SetWindow()
             {
-                eventWrapper.Visibility = Visibility.Hidden;
-                //faculties data
+            //window defaults
+                bottomPanel.Visibility = System.Windows.Visibility.Hidden;
+                showBottomPanel.Visibility = System.Windows.Visibility.Visible;
+                eventPopup.Visibility = Visibility.Hidden;
+                
+            //faculties data
                 otoczenie.Add(new Wydzialy("Anglistyka", "Wydział Anglistyki\n", 40000000, 10000));
                 otoczenie.Add(new Wydzialy("Biologia", "Wydział Biologii\n", 20000000, 16000));
                 otoczenie.Add(new Wydzialy("Chemia", "Wydział Chemii\n", 15000000, 12000));
