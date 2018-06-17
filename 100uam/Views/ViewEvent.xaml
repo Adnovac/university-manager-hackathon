@@ -10,7 +10,7 @@
         <Style BasedOn="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" TargetType="Button"></Style>
     </UserControl.Resources>
     <Grid>
-        <Image Name="eventCover" Source="C:\Users\Admin\Documents\GitHub\UniversityManager\resources\eventbackground.png" HorizontalAlignment="Left" Height="370" VerticalAlignment="Top" Width="620"/>
+        <Image Name="eventCover"  HorizontalAlignment="Left" Height="370" VerticalAlignment="Top" Width="620"/>
         <Image Name="eventAvatar" HorizontalAlignment="Left" Height="240" Margin="37,64,0,0" VerticalAlignment="Top" Width="180"/>
         <TextBlock Name="questTitle" HorizontalAlignment="Left" Margin="10,14,0,0" TextWrapping="Wrap" Text="Ania daje sztos questa" VerticalAlignment="Top" Width="600" Height="32" Foreground="White" TextAlignment="Center" FontSize="20" FontFamily="Times New Roman">
             <TextBlock.Effect>
@@ -22,7 +22,7 @@
         <StackPanel Name="costStackPanel" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="273" Margin="303,241,0,0" Orientation="Horizontal"/>
         <TextBlock HorizontalAlignment="Left" Margin="243,272,0,0" TextWrapping="Wrap" Text="Nagroda:" VerticalAlignment="Top" Foreground="#FF513218" FontSize="16" FontFamily="Times New Roman"/>
         <StackPanel Name="rewardStackPanel" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="261" Margin="315,268,0,0" Orientation="Horizontal"/>
-        <Button Name="questAcceptButton" Content="Akceptuj" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Margin="195,317,0,0" Height="30" Click="questAcceptButtonbClick" Background="#FF5D3616" BorderBrush="#FFE0C874" BorderThickness="2" Foreground="#FFDAD2C4" FontFamily="Times New Roman" FontSize="16"/>
-        <Button Name="questDeclineButton" Content="Odrzuć" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Margin="333,317,0,0" Height="30" Click="questDeclineButtonClick" Background="#FF5D3616" BorderBrush="#FFE0C874" BorderThickness="2" Foreground="#FFDAD2C4" FontFamily="Times New Roman" FontSize="14"/>
+        <Button Name="questAcceptButton" Content="Akceptuj" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Margin="195,317,0,0" Height="30" Click="QuestAcceptButtonbClick" Background="#FF5D3616" BorderBrush="#FFE0C874" BorderThickness="2" Foreground="#FFDAD2C4" FontFamily="Times New Roman" FontSize="16"/>
+        <Button Name="questDeclineButton" Content="Odrzuć" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Margin="333,317,0,0" Height="30" Click="QuestDeclineButtonClick" Background="#FF5D3616" BorderBrush="#FFE0C874" BorderThickness="2" Foreground="#FFDAD2C4" FontFamily="Times New Roman" FontSize="14"/>
     </Grid>
 </UserControl>

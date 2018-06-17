@@ -8,7 +8,7 @@
              MaxHeight="187" MaxWidth="160">
     <Grid Width="160" Height="187">
         <Image Name="emptyAreaTexture" HorizontalAlignment="Left" Height="160" VerticalAlignment="Top" Width="160" Margin="0,11,0,0"/>
-        <Button Name="build" Content="Buduj" HorizontalAlignment="Left" Margin="43,160,0,0" VerticalAlignment="Top" Width="75" Click="build_Click" BorderBrush="{x:Null}" Foreground="White">
+        <Button Name="build" Content="Buduj" HorizontalAlignment="Left" Margin="43,160,0,0" VerticalAlignment="Top" Width="75" Click="Build_Click" BorderBrush="{x:Null}" Foreground="White">
             <Button.Background>
                 <SolidColorBrush Color="Black" Opacity="0.3"/>
             </Button.Background>

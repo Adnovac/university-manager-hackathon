@@ -41,7 +41,7 @@ namespace _100uam.Views
             }
         }
 
-        private void build_Click(object sender, RoutedEventArgs e)
+        private void Build_Click(object sender, RoutedEventArgs e)
         {
             var myWin = (MainWindow)Application.Current.MainWindow;
             string texture;

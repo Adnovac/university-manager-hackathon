@@ -26,11 +26,13 @@ namespace _100uam.Views
         MainWindow mainWindow;
         public ViewEvent(string configPath, string questID, MainWindow mainWindow)
         {
+            string basicConfigPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location);
+            basicConfigPath = basicConfigPath.Substring(0, basicConfigPath.LastIndexOf('1')) + @"resources/";
             this.mainWindow = mainWindow;
             this.questID = questID;
             this.configPath = configPath;
             InitializeComponent();
-            SetEvent();
+            eventCover.Source = new BitmapImage(new Uri(basicConfigPath + "eventbackground.png"));
         }
 
         void SetEvent()
@@ -70,12 +72,12 @@ namespace _100uam.Views
             }
         }
 
-        private void questDeclineButtonClick(object sender, RoutedEventArgs e)
+        private void QuestDeclineButtonClick(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
         }
 
-        private void questAcceptButtonbClick(object sender, RoutedEventArgs e)
+        private void QuestAcceptButtonbClick(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
         }

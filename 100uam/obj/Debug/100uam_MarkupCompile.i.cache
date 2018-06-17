@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Admin\Documents\GitHub\UniversityManager\100uam\obj\Debug\
+C:\Users\Ania Nowak\Desktop\GitHub\university-manager-hackathon\100uam\obj\Debug\
 _100uam
 none
 false
 DEBUG;TRACE
-C:\Users\Admin\Documents\GitHub\UniversityManager\100uam\App.xaml
+C:\Users\Ania Nowak\Desktop\GitHub\university-manager-hackathon\100uam\App.xaml
 62147203730
 
-211607367367
+211669004178
 131569487696
 MainWindow.xaml;Views\emptyArea.xaml;Views\ViewEvent.xaml;Views\ViewEventResource.xaml;Views\ViewPersonel.xaml;Views\ViewWykladowca.xaml;
 
-False
+True
 

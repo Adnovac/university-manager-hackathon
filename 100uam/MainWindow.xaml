@@ -12,20 +12,20 @@
     <Grid>
         <Grid Name="izoMap" Margin="0,39,0,0">
             <Image Name="background" HorizontalAlignment="Left" Width="1272" Height="651" VerticalAlignment="Top"/>
-            <StackPanel Name="area1" HorizontalAlignment="Left" Height="187" Margin="409,22,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area2" HorizontalAlignment="Left" Height="187" Margin="733,22,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area3" HorizontalAlignment="Left" Height="187" Margin="1059,22,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area4" HorizontalAlignment="Left" Height="187" Margin="570,113,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area5" HorizontalAlignment="Left" Height="187" Margin="896,113,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area6" HorizontalAlignment="Left" Height="187" Margin="409,189,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area7" HorizontalAlignment="Left" Height="187" Margin="733,189,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area8" HorizontalAlignment="Left" Height="187" Margin="1059,189,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area9" HorizontalAlignment="Left" Height="187" Margin="246,280,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area10" HorizontalAlignment="Left" Height="187" Margin="570,280,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area11" HorizontalAlignment="Left" Height="187" Margin="896,280,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area12" HorizontalAlignment="Left" Height="187" Margin="409,356,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area13" HorizontalAlignment="Left" Height="187" Margin="733,356,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
-            <StackPanel Name="area14" HorizontalAlignment="Left" Height="187" Margin="1059,356,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area1" HorizontalAlignment="Left" Height="187" Margin="409,22,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="Area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area2" HorizontalAlignment="Left" Height="187" Margin="733,22,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="Area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area3" HorizontalAlignment="Left" Height="187" Margin="1059,22,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="Area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area4" HorizontalAlignment="Left" Height="187" Margin="570,113,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="Area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area5" HorizontalAlignment="Left" Height="187" Margin="896,113,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="Area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area6" HorizontalAlignment="Left" Height="187" Margin="409,189,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="Area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area7" HorizontalAlignment="Left" Height="187" Margin="733,189,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="Area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area8" HorizontalAlignment="Left" Height="187" Margin="1059,189,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="Area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area9" HorizontalAlignment="Left" Height="187" Margin="246,280,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="Area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area10" HorizontalAlignment="Left" Height="187" Margin="570,280,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="Area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area11" HorizontalAlignment="Left" Height="187" Margin="896,280,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="Area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area12" HorizontalAlignment="Left" Height="187" Margin="409,356,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="Area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area13" HorizontalAlignment="Left" Height="187" Margin="733,356,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="Area1_MouseLeftButtonDown"/>
+            <StackPanel Name="area14" HorizontalAlignment="Left" Height="187" Margin="1059,356,0,0" VerticalAlignment="Top" Width="160" Mouse.MouseDown="Area1_MouseLeftButtonDown"/>
         </Grid>
         <Grid x:Name="eventWrapper">
             <StackPanel x:Name="eventChecklist" Margin="27,321,1159,90" Orientation="Horizontal" Width="85" Height="280"/>
@@ -50,7 +50,7 @@
                 <TextBlock Name="year" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Year" Margin="0,8,104,8" Height="23" Width="138" FontSize="16" Foreground="White"/>
                 <Image Name="muteSoundImage" HorizontalAlignment="Right" Margin="0,-1,40,1" Width="24" Height="39"/>
                 <Button Name="muteSound" HorizontalAlignment="Right" Margin="0,0,40,0" Width="24" FontWeight="Bold" Click="MuteSound" FontSize="19" Height="39"/>
-                <Button Name="help" Content="?" HorizontalAlignment="Right" Margin="0,0,10,0" Width="24" Background="#FF725225" Foreground="#FFF7C720" FontWeight="Bold" Click="help_Click" FontSize="19" Height="39" Cursor="Help"/>
+                <Button Name="help" Content="?" HorizontalAlignment="Right" Margin="0,0,10,0" Width="24" Background="#FF725225" Foreground="#FFF7C720" FontWeight="Bold" Click="Help_Click" FontSize="19" Height="39" Cursor="Help"/>
             </Grid>
             <Grid Name="sideMenu" HorizontalAlignment="Left" Height="183" Margin="0,39,0,0" VerticalAlignment="Top" Width="286" >
                 <Image Name="sidePanel"/>
@@ -78,7 +78,7 @@
                 <Image Name="prestigeImage" HorizontalAlignment="Left" Height="25" Margin="28,136,0,0" VerticalAlignment="Top" Width="25"/>
             </Grid>
             <Image Name="nextRoundButtonImage" HorizontalAlignment="Left" Margin="51,236,0,0" VerticalAlignment="Top" Width="174" Height="51" />
-            <Button Name="nextRound" HorizontalAlignment="Left" Margin="51,236,0,0" VerticalAlignment="Top" Width="174" Height="51" FontSize="20" Click="nextRound_Click_1">
+            <Button Name="nextRound" HorizontalAlignment="Left" Margin="51,236,0,0" VerticalAlignment="Top" Width="174" Height="51" FontSize="20" Click="NextRound_Click_1">
                 <TextBlock TextWrapping="Wrap" Text="Koniec Rundy" FontFamily="Georgia" Foreground="#FF634315"/>
             </Button>
             <Grid Name="bottomPanel" HorizontalAlignment="Left" Height="137" Margin="0,553,0,0" VerticalAlignment="Top" Width="1272">

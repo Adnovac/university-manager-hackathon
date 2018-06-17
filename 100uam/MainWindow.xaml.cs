@@ -40,15 +40,9 @@ namespace _100uam
         List<Wydzialy> otoczenie = new List<Wydzialy>();
         public MainWindow()
         {
-            try
-            {
-                configPath = File.ReadAllText("config.txt");
-                MessageBox.Show(configPath);
-            }
-            catch
-            {
-                MessageBox.Show("Could not access config.txt");
-            }
+
+            configPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location);
+            configPath = configPath.Substring(0, configPath.LastIndexOf('1')) + @"resources/";
 
             InitializeComponent();
             mediaPlayer = new SoundPlayer(configPath + @"bensound-jazzyfrenchy.wav");
@@ -59,7 +53,8 @@ namespace _100uam
             SetMap();
             mediaPlayer.PlayLooping();
             MessageBox.Show("Zaczynasz jako jeden z założycieli UAM. Aby uzyskać pomoc kliknij w znak zapytania w prawym górnym rogu aplikacji!");
-            ThrowEvent("002", true);
+            //ThrowEvent("002", true);
+
         }
         #region Game Logic
             //classes for visuals
@@ -164,7 +159,7 @@ namespace _100uam
                 Aktualizacja();
             }
             #endregion
-            private void help_Click(object sender, RoutedEventArgs e)
+            private void Help_Click(object sender, RoutedEventArgs e)
             {
                 MessageBox.Show("Pamiętaj, że rachunki zostaną odjęte a zyski przyznane po zakończeniu rundy. Aby zatrudnić pracowików skorzystaj z rozsuwanego menu w lewym dolnym rogu ekranu!\nAutorzy: Magdalena Wilczyńska, Anna Nowak");
             }
@@ -184,7 +179,7 @@ namespace _100uam
 
 
             //other
-            private void nextRound_Click(object sender, RoutedEventArgs e)
+            private void NextRound_Click(object sender, RoutedEventArgs e)
             {
                 Aktualizacja();
                 player.playermoney = player.playermoney - wydatki;
@@ -204,7 +199,7 @@ namespace _100uam
                 Aktualizacja();
 
             }
-            private void nextRound_Click_1(object sender, RoutedEventArgs e)
+            private void NextRound_Click_1(object sender, RoutedEventArgs e)
             {
                 player.playermoney = player.playermoney - wydatki + wyplata;
                 Aktualizacja();
@@ -222,7 +217,7 @@ namespace _100uam
                 }
                 else if (gameyear == 2019 && otoczenie.Count == posiadane.Count)
                 {
-                    MessageBox.Show("Wygrałeś :DDDDD");
+                    MessageBox.Show("Wygrałeś :D");
                     System.Windows.Application.Current.Shutdown();
                 }
                 gameyear = gameyear + 1;
@@ -235,7 +230,7 @@ namespace _100uam
                 }
                 Aktualizacja();
             }
-            private void area1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+            private void Area1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
             {
                 StackPanel stackPanel = sender as StackPanel;
                 Wydzialy wydzial = (stackPanel.Children[0] as emptyArea).GetOtoczenie;
@@ -293,11 +288,6 @@ namespace _100uam
                 muteSoundImage.Source = new BitmapImage(new Uri(configPath + "icons/music.png"));
         }
         #endregion
-
-        private void SetWydzial(emptyArea element)
-        {
-
-        }
 
 
 
