@@ -17,7 +17,7 @@ Możliwości wygranej: Wybudowanie wszystkich wydziałów do 2019 roku
 + Magdalena Wilczyńska https://github.com/madziara89 
 + Anna Nowak https://github.com/Adnovac
 
-# Planowane funkcjonalności:
+# Przyszłość projektu:
 + Dodanie questów
 + Dodanie pracy biurowej
 + Zminimalizowanie monotonności rozgrywki
